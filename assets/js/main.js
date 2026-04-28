@@ -26,13 +26,25 @@
       en: 'assets/img/dashboard-screenshot.png',
       zh: 'assets/img/dashboard-screenshot-cn.png'
     },
+    'dashboard-portfolio': {
+      en: 'assets/img/dashboard-portfolio.png',
+      zh: 'assets/img/dashboard-portfolio-cn.png'
+    },
     'dashboard-correlation': {
       en: 'assets/img/dashboard-correlation.png',
       zh: 'assets/img/dashboard-correlation-cn.png'
     },
-    'tutorial-main': {
+    'tutorial-overview': {
+      en: 'assets/img/tutorial-overview-en.png',
+      hk: 'assets/img/tutorial-overview-hk.png',
+      tw: 'assets/img/tutorial-overview-tw.png',
+      cn: 'assets/img/tutorial-overview-cn.png'
+    },
+    'tutorial-week1': {
       en: 'assets/img/tutorial-screenshot.png',
-      zh: 'assets/img/tutorial-screenshot-cn.png'
+      hk: 'assets/img/tutorial-week1-hk.png',
+      tw: 'assets/img/tutorial-week1-tw.png',
+      cn: 'assets/img/tutorial-week1-cn.png'
     }
   };
   let currentLang = 'en';
@@ -49,7 +61,8 @@
 
   function setProjectVisual(imgId, visualKey) {
     const img = $('#' + imgId);
-    const source = visualSources[visualKey]?.[visualLangKey(currentLang)];
+    const sources = visualSources[visualKey] || {};
+    const source = sources[currentLang] || sources[visualLangKey(currentLang)] || sources.en;
     if (img && source && img.getAttribute('src') !== source) {
       img.setAttribute('src', source);
     }
@@ -57,7 +70,7 @@
 
   function updateProjectVisuals() {
     setProjectVisual('dashboardVisual', getSectionVisual('#dashboard', 'dashboard-main'));
-    setProjectVisual('tutorialVisual', getSectionVisual('#tutorial', 'tutorial-main'));
+    setProjectVisual('tutorialVisual', getSectionVisual('#tutorial', 'tutorial-overview'));
   }
 
   function updateStepStates() {

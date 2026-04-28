@@ -12,8 +12,8 @@ The purpose of this file is to give the next AI agent enough context to make cha
 - Maintain 4-language support: `en`, `hk`, `tw`, `cn`.
 - Hong Kong copy should read like formal Hong Kong financial/news prose, not colloquial Cantonese.
 - English page states should use English screenshots; Chinese page states should use Chinese screenshots where available.
-- The dashboard showcase intentionally uses two visuals: main dashboard view first, correlation view later.
-- The tutorial showcase should keep the Week 1 interactive-chart screenshot and remain clearly positioned as a first draft.
+- The dashboard showcase intentionally uses three visuals: dashboard overview first, positions/portfolio next, correlation later.
+- The tutorial showcase should use two visuals: course overview first, Week 1 interactive chart later, and remain clearly positioned as a first draft.
 - The top-bar flags currently use native emoji for accuracy; do not revert to obviously inaccurate CSS flag drawings.
 - Validate language toggle, theme toggle, sticky visuals, and mobile layout after substantive edits.
 
@@ -98,11 +98,13 @@ Keep this order unless the user explicitly asks to change the narrative flow.
   - active scroll step in each project section
 - The dashboard section uses `data-visual` values on each step:
   - `dashboard-main`
+  - `dashboard-portfolio`
   - `dashboard-correlation`
-- The tutorial section currently uses one visual key:
-  - `tutorial-main`
+- The tutorial section uses two visual keys:
+  - `tutorial-overview`
+  - `tutorial-week1`
 - The dashboard image changes less often than the copy on purpose.
-- The tutorial screenshot is taken from Week 1 with an interactive chart visible.
+- The tutorial begins on a course-overview screenshot, then switches to the Week 1 interactive chart.
 
 ## Scrollytelling behavior
 
@@ -110,8 +112,9 @@ Keep this order unless the user explicitly asks to change the narrative flow.
 - The words should advance in meaningful steps while the visual changes less frequently than the text.
 - For the dashboard showcase in particular, the intended behavior is:
   - multiple text steps
-  - at least two screenshots so the image does not change on every single paragraph
+  - three screenshots so the image changes less often than the copy
   - one default dashboard view
+  - one positions / portfolio view
   - one correlation view
 - If you modify this section, preserve the feeling that the copy is driving the story while the image acts as a stable anchor.
 
@@ -165,13 +168,15 @@ Keep this order unless the user explicitly asks to change the narrative flow.
 - Chinese-language page states should use Chinese screenshots where available.
 - English page state should use English screenshots.
 - For the dashboard showcase:
-  - there is one Chinese dashboard screenshot that is shared across `hk`, `tw`, and `cn`
-  - there is also a Chinese correlation screenshot for later steps
-  - there is an English correlation screenshot for `en`
+  - there is one Chinese dashboard overview screenshot that is shared across `hk`, `tw`, and `cn`
+  - there is one Chinese positions / portfolio screenshot that is currently shared across `hk`, `tw`, and `cn`
+  - there is one Chinese correlation screenshot for later steps
+  - English states use English screenshots where available
 - For the tutorial showcase:
-  - the preferred screenshot is from Week 1
-  - it should show an interactive chart, not just static text
-  - Chinese-language states should use the Chinese Week 1 screenshot
+  - the first screenshot should be the course overview page
+  - the later screenshot should be Week 1 with an interactive chart visible
+  - overview screenshots exist for `en`, `hk`, `tw`, and `cn`
+  - Week 1 screenshots exist for `en` and `hk`; `tw` and `cn` currently fall back to the shared Chinese Week 1 chart asset to avoid broken Mermaid renders upstream
 
 ## Asset conventions
 
@@ -182,10 +187,18 @@ Current naming style follows this pattern:
 - `avatar.jpg`
 - `dashboard-screenshot.png`
 - `dashboard-screenshot-cn.png`
+- `dashboard-portfolio.png`
+- `dashboard-portfolio-cn.png`
 - `dashboard-correlation.png`
 - `dashboard-correlation-cn.png`
+- `tutorial-overview-en.png`
+- `tutorial-overview-hk.png`
+- `tutorial-overview-tw.png`
+- `tutorial-overview-cn.png`
 - `tutorial-screenshot.png`
-- `tutorial-screenshot-cn.png`
+- `tutorial-week1-hk.png`
+- `tutorial-week1-tw.png`
+- `tutorial-week1-cn.png`
 
 If you add more screenshots, keep the names explicit and language-aware.
 
@@ -284,24 +297,36 @@ Expected asset set:
 
 - `assets/img/dashboard-screenshot.png`
 - `assets/img/dashboard-screenshot-cn.png`
+- `assets/img/dashboard-portfolio.png`
+- `assets/img/dashboard-portfolio-cn.png`
 - `assets/img/dashboard-correlation.png`
 - `assets/img/dashboard-correlation-cn.png`
+- `assets/img/tutorial-overview-en.png`
+- `assets/img/tutorial-overview-hk.png`
+- `assets/img/tutorial-overview-tw.png`
+- `assets/img/tutorial-overview-cn.png`
 - `assets/img/tutorial-screenshot.png`
-- `assets/img/tutorial-screenshot-cn.png`
+- `assets/img/tutorial-week1-hk.png`
+- `assets/img/tutorial-week1-tw.png`
+- `assets/img/tutorial-week1-cn.png`
 
 Screenshot intent:
 
 - Dashboard main view:
   - English for `en`
   - Chinese for `hk`, `tw`, `cn`
+- Dashboard positions / portfolio view:
+  - shared cropped capture currently used for all languages
 - Dashboard correlation view:
   - English for `en`
   - Chinese for `hk`, `tw`, `cn`
-- Tutorial view:
-  - Week 1 page
+- Tutorial overview view:
+  - one screenshot each for `en`, `hk`, `tw`, `cn`
+- Tutorial Week 1 view:
   - interactive chart visible in frame
   - English for `en`
-  - Chinese for `hk`, `tw`, `cn`
+  - Hong Kong-specific chart screenshot for `hk`
+  - shared Chinese Week 1 chart asset for `tw` and `cn`
 
 When recapturing tutorial images, target the Week 1 interactive chart area rather than the top hero or plain text sections.
 
