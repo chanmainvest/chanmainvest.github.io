@@ -21,10 +21,76 @@
   const dict = window.I18N || {};
   const supported = ['en', 'hk', 'tw', 'cn'];
   const htmlLangMap = { en: 'en', hk: 'zh-HK', tw: 'zh-TW', cn: 'zh-CN' };
+  const visualSources = {
+    'dashboard-main': {
+      en: 'assets/img/dashboard-screenshot.png',
+      zh: 'assets/img/dashboard-screenshot-cn.png'
+    },
+    'dashboard-correlation': {
+      en: 'assets/img/dashboard-correlation.png',
+      zh: 'assets/img/dashboard-correlation-cn.png'
+    },
+    'tutorial-main': {
+      en: 'assets/img/tutorial-screenshot.png',
+      zh: 'assets/img/tutorial-screenshot-cn.png'
+    }
+  };
+  let currentLang = 'en';
+
+  function visualLangKey(lang) {
+    return lang === 'en' ? 'en' : 'zh';
+  }
+
+  function getSectionVisual(sectionId, fallbackVisual) {
+    const steps = $$(sectionId + ' .step.active');
+    const active = steps.length ? steps[steps.length - 1] : $(sectionId + ' .step');
+    return active?.dataset.visual || fallbackVisual;
+  }
+
+  function setProjectVisual(imgId, visualKey) {
+    const img = $('#' + imgId);
+    const source = visualSources[visualKey]?.[visualLangKey(currentLang)];
+    if (img && source && img.getAttribute('src') !== source) {
+      img.setAttribute('src', source);
+    }
+  }
+
+  function updateProjectVisuals() {
+    setProjectVisual('dashboardVisual', getSectionVisual('#dashboard', 'dashboard-main'));
+    setProjectVisual('tutorialVisual', getSectionVisual('#tutorial', 'tutorial-main'));
+  }
+
+  function updateStepStates() {
+    ['#dashboard', '#tutorial'].forEach((sectionId) => {
+      const steps = $$(sectionId + ' .step');
+      if (!steps.length) return;
+
+      const targetY = window.innerHeight * 0.45;
+      let activeIndex = 0;
+      let bestDistance = Number.POSITIVE_INFINITY;
+
+      steps.forEach((step, index) => {
+        const rect = step.getBoundingClientRect();
+        const center = rect.top + (rect.height / 2);
+        const distance = Math.abs(center - targetY);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      steps.forEach((step, index) => {
+        step.classList.toggle('active', index === activeIndex);
+      });
+    });
+
+    updateProjectVisuals();
+  }
 
   function applyLang(lang) {
     if (!supported.includes(lang)) lang = 'en';
     const d = dict[lang] || dict.en;
+    currentLang = lang;
     document.documentElement.lang = htmlLangMap[lang];
     document.body.dataset.lang = lang;
     $$('[data-i18n]').forEach((el) => {
@@ -33,6 +99,7 @@
     });
     $$('.flag-btn').forEach((b) => b.classList.toggle('active', b.dataset.lang === lang));
     localStorage.setItem('chanma-lang', lang);
+    updateProjectVisuals();
   }
 
   $$('.flag-btn').forEach((b) => {
@@ -64,16 +131,12 @@
   $$('#sideNav a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-  /* -------- SCROLLYTELLING: activate steps -------- */
-  const stepObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add('active');
-      else entry.target.classList.remove('active');
-    });
-  }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
-  $$('.step').forEach((s) => stepObserver.observe(s));
+  /* -------- SCROLLYTELLING: activate closest step -------- */
+  window.addEventListener('scroll', updateStepStates, { passive: true });
+  window.addEventListener('resize', updateStepStates);
 
   /* -------- YEAR -------- */
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();
+  updateStepStates();
 })();

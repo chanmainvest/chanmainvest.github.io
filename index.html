@@ -26,16 +26,16 @@
     <div class="topbar-actions">
       <div class="lang-group" role="group" aria-label="Language">
         <button class="flag-btn active" data-lang="en" title="English" aria-label="English">
-          <span class="flag flag-en" aria-hidden="true"></span>
+          <span class="flag-emoji" aria-hidden="true">🇺🇸</span>
         </button>
         <button class="flag-btn" data-lang="hk" title="香港" aria-label="Hong Kong Chinese">
-          <span class="flag flag-hk" aria-hidden="true"></span>
+          <span class="flag-emoji" aria-hidden="true">🇭🇰</span>
         </button>
         <button class="flag-btn" data-lang="tw" title="台灣" aria-label="Taiwan Chinese">
-          <span class="flag flag-tw" aria-hidden="true"></span>
+          <span class="flag-emoji" aria-hidden="true">🇹🇼</span>
         </button>
         <button class="flag-btn" data-lang="cn" title="中国大陆" aria-label="Mainland Chinese">
-          <span class="flag flag-cn" aria-hidden="true"></span>
+          <span class="flag-emoji" aria-hidden="true">🇨🇳</span>
         </button>
       </div>
       <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -103,29 +103,29 @@
         <div class="sticky-visual">
           <div class="device-frame">
             <div class="device-bar"><span></span><span></span><span></span></div>
-            <img src="assets/img/dashboard-screenshot.png" alt="Portfolio dashboard screenshot" />
+            <img id="dashboardVisual" src="assets/img/dashboard-screenshot.png" alt="Portfolio dashboard screenshot" />
           </div>
         </div>
         <div class="scroll-steps">
-          <div class="step">
+          <div class="step" data-visual="dashboard-main">
             <span class="step-tag" data-i18n="proj.live">Live · Open-source</span>
-            <h2><span class="accent">Portfolio</span> Dashboard</h2>
+            <h2 data-i18n="dash.title"><span class="accent">Portfolio</span> Dashboard</h2>
             <p data-i18n="dash.intro">
               A Bloomberg-style single-page report that reads an Excel workbook,
               pulls live market data from Yahoo Finance, and produces an interactive analytics dashboard for your real portfolio.
             </p>
           </div>
-          <div class="step">
+          <div class="step" data-visual="dashboard-main">
             <h3 data-i18n="dash.f1.title">Risk that you can actually read</h3>
             <p data-i18n="dash.f1.body">VaR, Sharpe, Sortino, Calmar, max drawdown and beta — in both CAD and USD, with hover-explainers on every term.</p>
           </div>
-          <div class="step">
-            <h3 data-i18n="dash.f2.title">Options-aware exposure</h3>
-            <p data-i18n="dash.f2.body">Live option chains, contract values, delta exposure, and 14 stress scenarios from -50% to +50% with the option hedge baked in.</p>
+          <div class="step" data-visual="dashboard-correlation">
+            <h3 data-i18n="dash.f2.title">Correlation + stress testing</h3>
+            <p data-i18n="dash.f2.body">Heatmaps show how the book really moves together, while stress scenarios from -50% to +50% reveal how the portfolio behaves under pressure.</p>
           </div>
-          <div class="step">
-            <h3 data-i18n="dash.f3.title">Privacy mode + dual currency</h3>
-            <p data-i18n="dash.f3.body">One click to hide all dollar amounts (great for screen-sharing), and a USD/CAD toggle on every dollar value.</p>
+          <div class="step" data-visual="dashboard-correlation">
+            <h3 data-i18n="dash.f3.title">Options-aware exposure + privacy mode</h3>
+            <p data-i18n="dash.f3.body">Live option chains, delta exposure, privacy mode for screen-sharing, and dual-currency reporting for every dollar figure.</p>
             <div class="step-cta">
               <a class="btn btn-primary" href="https://chanmainvest.github.io/portfolio_dashboard/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
               <a class="btn btn-ghost" href="https://github.com/chanmainvest/portfolio_dashboard" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
@@ -141,29 +141,29 @@
         <div class="sticky-visual">
           <div class="device-frame">
             <div class="device-bar"><span></span><span></span><span></span></div>
-            <img src="assets/img/tutorial-screenshot.png" alt="Investment tutorial screenshot" />
+            <img id="tutorialVisual" src="assets/img/tutorial-screenshot.png" alt="Investment tutorial screenshot" />
           </div>
         </div>
         <div class="scroll-steps">
-          <div class="step">
+          <div class="step" data-visual="tutorial-main">
             <span class="step-tag warn" data-i18n="proj.draft">Early draft · Open-source</span>
-            <h2><span class="accent">Investment</span> Tutorial</h2>
+            <h2 data-i18n="tut.title"><span class="accent">Investment</span> Tutorial</h2>
             <p data-i18n="tut.intro">
               A 52-week investment course taking you from "why invest?" to professional-grade portfolio management,
               grounded in the CFA curriculum and decades of real retail trading experience.
             </p>
           </div>
-          <div class="step">
-            <h3 data-i18n="tut.f1.title">Five levels, 52 weeks</h3>
-            <p data-i18n="tut.f1.body">Foundation, Intermediate, Advanced, Sophisticated, Expert — each lesson is 1 hour of reading plus a two-host YouTube script.</p>
+          <div class="step" data-visual="tutorial-main">
+            <h3 data-i18n="tut.f1.title">Interactive learning from week 1</h3>
+            <p data-i18n="tut.f1.body">The first week already includes adjustable charts and guided comparisons, so the course teaches by reading, exploring and testing ideas rather than by static notes alone.</p>
           </div>
-          <div class="step">
-            <h3 data-i18n="tut.f2.title">Side lessons + interactive demos</h3>
-            <p data-i18n="tut.f2.body">Practical toolkit, taxes & accounts, options income, macro & policy. KaTeX-rendered formulas and interactive charts on every page.</p>
+          <div class="step" data-visual="tutorial-main">
+            <h3 data-i18n="tut.f2.title">Five levels, 52 weeks</h3>
+            <p data-i18n="tut.f2.body">Foundation, Intermediate, Advanced, Sophisticated, Expert — each lesson combines structured reading, interactive charts, and a two-host YouTube-ready script.</p>
           </div>
-          <div class="step">
-            <h3 data-i18n="tut.f3.title">English · 香港 · 台灣 · 中国</h3>
-            <p data-i18n="tut.f3.body">Every chapter is fully localised. The website itself toggles between four languages — same as the page you're reading now.</p>
+          <div class="step" data-visual="tutorial-main">
+            <h3 data-i18n="tut.f3.title">Still a first draft, already multilingual</h3>
+            <p data-i18n="tut.f3.body">This is the first draft, not the finished course. Even so, it already ships in four language versions and is designed to grow into a fuller interactive learning system.</p>
             <div class="step-cta">
               <a class="btn btn-primary" href="https://chanmainvest.github.io/tutorial/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
               <a class="btn btn-ghost" href="https://github.com/chanmainvest/tutorial" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
@@ -275,6 +275,12 @@
             <a href="https://www.patreon.com/c/hevangel" target="_blank" rel="noopener">Patreon</a>
             <a href="mailto:chanmainvest@hevangel.com">chanmainvest@hevangel.com</a>
           </div>
+          <p class="contact-social">
+            <span data-i18n="contact.social">Social</span> —
+            <a href="https://www.threads.com/@chanmainvest" target="_blank" rel="noopener">Threads</a>
+            ·
+            <a href="https://www.facebook.com/chanmainvest" target="_blank" rel="noopener">Facebook</a>
+          </p>
         </div>
         <aside class="disclaimer">
           <h3 data-i18n="disclaimer.title">Disclaimer</h3>

@@ -129,49 +129,10 @@ body.menu-open .hamburger span:nth-child(3) { top: 18px; transform: rotate(-45de
 }
 .flag-btn:hover { background: var(--surface-2); }
 .flag-btn.active { background: var(--surface-2); box-shadow: inset 0 0 0 2px var(--accent); }
-.flag { display: block; width: 22px; height: 16px; border-radius: 3px; background-size: cover; background-position: center; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
-
-/* CSS-only flags via gradients */
-.flag-en {
-  background:
-    linear-gradient(180deg,
-      #b22234 0 8%, #fff 8% 16%, #b22234 16% 24%, #fff 24% 32%, #b22234 32% 40%,
-      #fff 40% 48%, #b22234 48% 56%, #fff 56% 64%, #b22234 64% 72%, #fff 72% 80%,
-      #b22234 80% 88%, #fff 88% 96%, #b22234 96% 100%);
-  position: relative; overflow: hidden;
-}
-.flag-en::before {
-  content: ""; position: absolute; left: 0; top: 0; width: 45%; height: 53%; background: #3c3b6e;
-}
-.flag-hk {
-  background: #ee1c25;
-  position: relative; overflow: hidden;
-}
-.flag-hk::before {
-  content: "✿"; position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 12px; line-height: 1;
-}
-.flag-tw {
-  background:
-    linear-gradient(135deg, #000095 0 50%, transparent 50%) #fe0000;
-  position: relative; overflow: hidden;
-}
-.flag-tw::after {
-  content: "★"; position: absolute; left: 22%; top: 30%;
-  transform: translate(-50%,-50%); color: #fff; font-size: 8px;
-}
-.flag-cn {
-  background: #de2910;
-  position: relative; overflow: hidden;
-}
-.flag-cn::before {
-  content: "★"; position: absolute; left: 22%; top: 38%;
-  transform: translate(-50%,-50%); color: #ffde00; font-size: 9px;
-}
-.flag-cn::after {
-  content: "★★★★"; position: absolute; left: 55%; top: 50%;
-  transform: translate(-50%,-50%); color: #ffde00; font-size: 5px; letter-spacing: 1px;
+.flag-emoji {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
 }
 
 /* SIDE NAV */
@@ -402,6 +363,21 @@ body.menu-open .scrim { opacity: 1; pointer-events: auto; }
 }
 .contact-links a:hover { background: var(--accent); color: #1a1300; border-color: var(--accent); }
 
+.contact-social {
+  margin-top: 18px;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.contact-social a {
+  color: var(--text);
+  transition: color var(--t);
+}
+
+.contact-social a:hover {
+  color: var(--accent);
+}
+
 .disclaimer {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r); padding: 24px; align-self: start;
@@ -438,7 +414,7 @@ body.menu-open .scrim { opacity: 1; pointer-events: auto; }
   .topbar { padding: 10px 12px; gap: 8px; }
   .lang-group { padding: 2px; }
   .flag-btn { width: 28px; height: 28px; }
-  .flag { width: 18px; height: 13px; }
+  .flag-emoji { font-size: 14px; }
   .hero-text h1 { font-size: 32px; }
   .hero-stats { gap: 20px; }
   .hero-stats strong { font-size: 22px; }
