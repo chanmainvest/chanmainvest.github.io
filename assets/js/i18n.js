@@ -1,6 +1,7 @@
 // Chanma Investment — i18n dictionary
 window.I18N = {
   en: {
+    "brand.name": "Chanma Investment",
     "nav.about": "About",
     "nav.dashboard": "Portfolio Dashboard",
     "nav.tutorial": "Tutorial",
@@ -70,6 +71,7 @@ window.I18N = {
   },
 
   hk: {
+    "brand.name": "陳馬投資研究",
     "nav.about": "關於我",
     "nav.dashboard": "投資組合儀表板",
     "nav.tutorial": "投資教學",
@@ -78,7 +80,7 @@ window.I18N = {
     "nav.contact": "聯絡",
 
     "hero.eyebrow": "獨立投資者 · 工程師 · 開源創作者",
-    "hero.title": "你好，我以公開方式打造 <span class=\"accent\">Chanma Investment</span>。",
+    "hero.title": "<span class=\"accent\">陳馬投資研究</span>：把自用的投資工具與研究流程公開分享。",
     "hero.lede": "這些工具原本是為管理個人投資組合及進行研究而寫。既然算力成本已經付出，便索性開放予所有人使用。所有項目均以開源方式發布，亦歡迎贊助支持。",
     "hero.cta.primary": "查看我的作品",
     "hero.cta.secondary": "閱讀電子通訊",
@@ -139,6 +141,7 @@ window.I18N = {
   },
 
   tw: {
+    "brand.name": "陳馬投資研究",
     "nav.about": "關於我",
     "nav.dashboard": "投資組合儀表板",
     "nav.tutorial": "投資教學",
@@ -147,7 +150,7 @@ window.I18N = {
     "nav.contact": "聯絡",
 
     "hero.eyebrow": "獨立投資人 · 工程師 · 開源",
-    "hero.title": "嗨，我正在公開打造 <span class=\"accent\">Chanma Investment</span>。",
+    "hero.title": "<span class=\"accent\">陳馬投資研究</span>：把我自己在用的投資工具與研究流程公開分享。",
     "hero.lede": "這些工具本來是寫給自己用的 —— 拿來管理自己的投資組合、做自己的研究。Token 反正都花了，不如分享給大家。所有專案都會開源，歡迎贊助。",
     "hero.cta.primary": "看看作品",
     "hero.cta.secondary": "閱讀電子報",
@@ -208,6 +211,7 @@ window.I18N = {
   },
 
   cn: {
+    "brand.name": "陈马投资研究",
     "nav.about": "关于我",
     "nav.dashboard": "投资组合仪表盘",
     "nav.tutorial": "投资教程",
@@ -216,7 +220,7 @@ window.I18N = {
     "nav.contact": "联系",
 
     "hero.eyebrow": "独立投资者 · 工程师 · 开源",
-    "hero.title": "你好，我正在公开打造 <span class=\"accent\">Chanma Investment</span>。",
+    "hero.title": "<span class=\"accent\">陈马投资研究</span>：把我自己在用的投资工具和研究流程公开分享。",
     "hero.lede": "这些工具最初是写给自己用的 —— 管理自己的投资组合，做自己的研究。Token 反正都花了，不如分享出来。所有项目都会开源，欢迎赞助。",
     "hero.cta.primary": "看看作品",
     "hero.cta.secondary": "阅读通讯",
