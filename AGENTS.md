@@ -14,7 +14,7 @@ The purpose of this file is to give the next AI agent enough context to make cha
 - English page states should use English screenshots; Chinese page states should use Chinese screenshots where available.
 - The dashboard showcase intentionally uses three visuals: dashboard overview first, positions/portfolio next, correlation later.
 - The tutorial showcase should use two visuals: course overview first, Week 1 interactive chart later, and remain clearly positioned as a first draft.
-- The top-bar flags currently use native emoji for accuracy; do not revert to obviously inaccurate CSS flag drawings.
+- The top-bar language buttons use real flag image assets; do not revert to text pills or obviously inaccurate CSS flag drawings.
 - Validate language toggle, theme toggle, sticky visuals, and mobile layout after substantive edits.
 
 ## Product intent
@@ -88,11 +88,11 @@ Keep this order unless the user explicitly asks to change the narrative flow.
 
 ## Current implementation notes
 
-- The top-bar language buttons use emoji flags:
-  - `🇺🇸` for English
-  - `🇭🇰` for Hong Kong Chinese
-  - `🇹🇼` for Taiwan Chinese
-  - `🇨🇳` for Mainland Chinese
+- The top-bar language buttons use local flag image assets:
+  - `assets/img/flag-us.svg`
+  - `assets/img/flag-hk.svg`
+  - `assets/img/flag-tw.svg`
+  - `assets/img/flag-cn.svg`
 - `assets/js/main.js` swaps showcase images based on:
   - current language (`en` vs Chinese states)
   - active scroll step in each project section
