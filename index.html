@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chanma Investment — Open-source investment research & tools</title>
+  <meta name="description" content="Chanma Investment — open-source investment research, portfolio analytics and tutorials. Built for myself, shared with everyone." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" type="image/jpeg" href="assets/img/avatar.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar" id="topbar">
+    <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-controls="sideNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#hero">
+      <img class="brand-logo" src="assets/img/avatar.jpg" alt="Chanma" />
+      <span class="brand-name">Chanma Investment</span>
+    </a>
+
+    <div class="topbar-actions">
+      <div class="lang-group" role="group" aria-label="Language">
+        <button class="flag-btn active" data-lang="en" title="English" aria-label="English">
+          <span class="flag flag-en" aria-hidden="true"></span>
+        </button>
+        <button class="flag-btn" data-lang="hk" title="香港" aria-label="Hong Kong Chinese">
+          <span class="flag flag-hk" aria-hidden="true"></span>
+        </button>
+        <button class="flag-btn" data-lang="tw" title="台灣" aria-label="Taiwan Chinese">
+          <span class="flag flag-tw" aria-hidden="true"></span>
+        </button>
+        <button class="flag-btn" data-lang="cn" title="中国大陆" aria-label="Mainland Chinese">
+          <span class="flag flag-cn" aria-hidden="true"></span>
+        </button>
+      </div>
+      <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side navigation drawer -->
+  <nav class="sidenav" id="sideNav" aria-hidden="true">
+    <ul>
+      <li><a href="#hero" data-i18n="nav.about">About</a></li>
+      <li><a href="#dashboard" data-i18n="nav.dashboard">Portfolio Dashboard</a></li>
+      <li><a href="#tutorial" data-i18n="nav.tutorial">Tutorial</a></li>
+      <li><a href="#pipeline" data-i18n="nav.pipeline">In the Pipeline</a></li>
+      <li><a href="#support" data-i18n="nav.support">Newsletter & Support</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="sidenav-footer">
+      <a href="https://github.com/chanmainvest" target="_blank" rel="noopener">GitHub</a>
+      <span>·</span>
+      <a href="https://hevangel.com" target="_blank" rel="noopener">hevangel.com</a>
+    </div>
+  </nav>
+  <div class="scrim" id="scrim"></div>
+
+  <main>
+    <!-- HERO / ABOUT -->
+    <section class="section hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-photo">
+          <img src="assets/img/avatar.jpg" alt="Chanma avatar" />
+          <div class="hero-photo-ring"></div>
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Independent investor · Engineer · Open-source</p>
+          <h1 data-i18n="hero.title">Hi, I'm building <span class="accent">Chanma Investment</span> in the open.</h1>
+          <p class="lede" data-i18n="hero.lede">
+            I built these tools for myself — to manage my own portfolio and run my own research.
+            The compute tokens are already spent, so I share everything for free. All projects are open-source,
+            donations are welcome.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#dashboard" data-i18n="hero.cta.primary">See my work</a>
+            <a class="btn btn-ghost" href="https://hevangel.substack.com/" target="_blank" rel="noopener" data-i18n="hero.cta.secondary">Read the newsletter</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>2</strong><span data-i18n="hero.stat.live">live projects</span></li>
+            <li><strong>3</strong><span data-i18n="hero.stat.pipeline">in the pipeline</span></li>
+            <li><strong>4</strong><span data-i18n="hero.stat.langs">languages supported</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+      </div>
+    </section>
+
+    <!-- PROJECT 1: Portfolio Dashboard -->
+    <section class="section project" id="dashboard">
+      <div class="scroll-stage">
+        <div class="sticky-visual">
+          <div class="device-frame">
+            <div class="device-bar"><span></span><span></span><span></span></div>
+            <img src="assets/img/dashboard-screenshot.png" alt="Portfolio dashboard screenshot" />
+          </div>
+        </div>
+        <div class="scroll-steps">
+          <div class="step">
+            <span class="step-tag" data-i18n="proj.live">Live · Open-source</span>
+            <h2><span class="accent">Portfolio</span> Dashboard</h2>
+            <p data-i18n="dash.intro">
+              A Bloomberg-style single-page report that reads an Excel workbook,
+              pulls live market data from Yahoo Finance, and produces an interactive analytics dashboard for your real portfolio.
+            </p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="dash.f1.title">Risk that you can actually read</h3>
+            <p data-i18n="dash.f1.body">VaR, Sharpe, Sortino, Calmar, max drawdown and beta — in both CAD and USD, with hover-explainers on every term.</p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="dash.f2.title">Options-aware exposure</h3>
+            <p data-i18n="dash.f2.body">Live option chains, contract values, delta exposure, and 14 stress scenarios from -50% to +50% with the option hedge baked in.</p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="dash.f3.title">Privacy mode + dual currency</h3>
+            <p data-i18n="dash.f3.body">One click to hide all dollar amounts (great for screen-sharing), and a USD/CAD toggle on every dollar value.</p>
+            <div class="step-cta">
+              <a class="btn btn-primary" href="https://chanmainvest.github.io/portfolio_dashboard/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
+              <a class="btn btn-ghost" href="https://github.com/chanmainvest/portfolio_dashboard" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT 2: Tutorial -->
+    <section class="section project alt" id="tutorial">
+      <div class="scroll-stage reverse">
+        <div class="sticky-visual">
+          <div class="device-frame">
+            <div class="device-bar"><span></span><span></span><span></span></div>
+            <img src="assets/img/tutorial-screenshot.png" alt="Investment tutorial screenshot" />
+          </div>
+        </div>
+        <div class="scroll-steps">
+          <div class="step">
+            <span class="step-tag warn" data-i18n="proj.draft">Early draft · Open-source</span>
+            <h2><span class="accent">Investment</span> Tutorial</h2>
+            <p data-i18n="tut.intro">
+              A 52-week investment course taking you from "why invest?" to professional-grade portfolio management,
+              grounded in the CFA curriculum and decades of real retail trading experience.
+            </p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="tut.f1.title">Five levels, 52 weeks</h3>
+            <p data-i18n="tut.f1.body">Foundation, Intermediate, Advanced, Sophisticated, Expert — each lesson is 1 hour of reading plus a two-host YouTube script.</p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="tut.f2.title">Side lessons + interactive demos</h3>
+            <p data-i18n="tut.f2.body">Practical toolkit, taxes & accounts, options income, macro & policy. KaTeX-rendered formulas and interactive charts on every page.</p>
+          </div>
+          <div class="step">
+            <h3 data-i18n="tut.f3.title">English · 香港 · 台灣 · 中国</h3>
+            <p data-i18n="tut.f3.body">Every chapter is fully localised. The website itself toggles between four languages — same as the page you're reading now.</p>
+            <div class="step-cta">
+              <a class="btn btn-primary" href="https://chanmainvest.github.io/tutorial/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
+              <a class="btn btn-ghost" href="https://github.com/chanmainvest/tutorial" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="section pipeline" id="pipeline">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="pipeline.eyebrow">Coming soon</p>
+          <h2 data-i18n="pipeline.title">In the pipeline</h2>
+          <p class="section-sub" data-i18n="pipeline.sub">
+            Three projects I'm actively building. Same philosophy: built for myself, shared open-source.
+          </p>
+        </header>
+        <div class="card-grid">
+          <article class="proj-card disabled">
+            <div class="proj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-7"/></svg>
+            </div>
+            <span class="badge" data-i18n="badge.soon">Coming soon</span>
+            <h3 data-i18n="pipe.trade.title">Trade History &amp; P&amp;L</h3>
+            <p data-i18n="pipe.trade.body">
+              Consolidate every brokerage statement into one dashboard. See realised + unrealised P&amp;L per
+              position, run what-if analysis on past trades, and learn from your own history.
+            </p>
+          </article>
+          <article class="proj-card disabled">
+            <div class="proj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <span class="badge" data-i18n="badge.soon">Coming soon</span>
+            <h3 data-i18n="pipe.kb.title">Pundit Knowledge Base</h3>
+            <p data-i18n="pipe.kb.body">
+              Scrape every podcast, newspaper, magazine, Patreon, Substack and YouTube channel I follow.
+              An LLM tracks every prediction. A leaderboard shows who actually helped you make money — and who is reliably wrong.
+            </p>
+          </article>
+          <article class="proj-card disabled">
+            <div class="proj-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42A2.78 2.78 0 0020.6 4.5C18.88 4 12 4 12 4s-6.88 0-8.6.5A2.78 2.78 0 001.46 6.42 29 29 0 001 11.5a29 29 0 00.46 5.08A2.78 2.78 0 003.4 18.5C5.12 19 12 19 12 19s6.88 0 8.6-.5a2.78 2.78 0 001.94-1.92A29 29 0 0023 11.5a29 29 0 00-.46-5.08z"/><path d="M9.75 14.85V8.15l5.5 3.35-5.5 3.35z" fill="currentColor"/></svg>
+            </div>
+            <span class="badge" data-i18n="badge.soon">Coming soon</span>
+            <h3 data-i18n="pipe.yt.title">YouTube Channel</h3>
+            <p data-i18n="pipe.yt.body">
+              Two-host video scripts straight from the tutorial, plus walkthroughs of every dashboard feature
+              and weekly market commentary. Subscribe early — channel link goes live with episode 1.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT / NEWSLETTER -->
+    <section class="section support" id="support">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="support.eyebrow">Read · Subscribe · Support</p>
+          <h2 data-i18n="support.title">Two newsletters, one open-source promise</h2>
+          <p class="section-sub" data-i18n="support.sub">
+            Substack is free deep-research I run through ChatGPT. Patreon is hand-written analysis with
+            extra benefits for members. Everything in the GitHub repos stays free forever.
+          </p>
+        </header>
+        <div class="card-grid two">
+          <a class="link-card substack" href="https://hevangel.substack.com/" target="_blank" rel="noopener">
+            <div class="link-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v3H3V3zm0 5h18v3H3V8zm0 5h18v8l-9-4-9 4v-8z"/></svg>
+            </div>
+            <h3>Substack</h3>
+            <p data-i18n="support.substack.body">
+              Free deep-research reports — copied straight from my ChatGPT investigations on macro, single
+              stocks and strategy ideas. The tokens are already spent, you might as well read them.
+            </p>
+            <span class="link-card-cta" data-i18n="support.substack.cta">hevangel.substack.com →</span>
+          </a>
+          <a class="link-card patreon" href="https://www.patreon.com/c/hevangel" target="_blank" rel="noopener">
+            <div class="link-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="15" cy="9.5" r="6.5"/><rect x="3" y="3" width="3.5" height="18"/></svg>
+            </div>
+            <h3>Patreon</h3>
+            <p data-i18n="support.patreon.body">
+              Hand-written, in-depth investment analysis. Membership tiers also unlock answered questions,
+              custom feature requests on the open-source repos, and access to my hosted version of the tools.
+            </p>
+            <span class="link-card-cta" data-i18n="support.patreon.cta">patreon.com/hevangel →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 data-i18n="contact.title">Stay in touch</h2>
+          <p data-i18n="contact.body">
+            Questions, ideas, bug reports? Open an issue on GitHub or drop me an email.
+            All projects are MIT-licensed; donations are entirely optional and very appreciated.
+          </p>
+          <div class="contact-links">
+            <a href="https://hevangel.com" target="_blank" rel="noopener">hevangel.com</a>
+            <a href="https://github.com/chanmainvest" target="_blank" rel="noopener">github.com/chanmainvest</a>
+            <a href="https://hevangel.substack.com/" target="_blank" rel="noopener">Substack</a>
+            <a href="https://www.patreon.com/c/hevangel" target="_blank" rel="noopener">Patreon</a>
+            <a href="mailto:chanmainvest@hevangel.com">chanmainvest@hevangel.com</a>
+          </div>
+        </div>
+        <aside class="disclaimer">
+          <h3 data-i18n="disclaimer.title">Disclaimer</h3>
+          <p data-i18n="disclaimer.body">
+            Everything on this site is for educational and informational purposes only and is not investment,
+            financial, legal or tax advice. Markets are volatile; past performance does not predict future results.
+            You are solely responsible for your own investment decisions.
+          </p>
+        </aside>
+      </div>
+      <footer class="footer">
+        <span>© <span id="year"></span> Chanma Investment · MIT License</span>
+        <span class="footer-spacer"></span>
+        <span data-i18n="footer.built">Built in the open</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
