@@ -53,9 +53,10 @@ The page is intentionally organized as a single long-form story:
 1. Hero / About
 2. Portfolio Dashboard showcase
 3. Investment Tutorial showcase
-4. Pipeline / future projects
-5. Newsletter and support
-6. Contact and disclaimer
+4. More live projects
+5. Pipeline / future projects
+6. Newsletter and support
+7. Contact and disclaimer
 
 Keep this order unless the user explicitly asks to change the narrative flow.
 
@@ -143,12 +144,24 @@ Keep this order unless the user explicitly asks to change the narrative flow.
   - multilingual course delivery
   - YouTube-ready teaching format
 
+### More live projects
+
+- This section shows public projects that do not need the full sticky scrollytelling treatment.
+- Current projects:
+  - Trade History (work in progress)
+  - Bloomberg Mockup (work in progress)
+  - Wyandanch Library (Chinese-translated finance education library)
+  - Reading Library (English-only investor book library)
+- Trade History should be described as multi-broker statement ingestion, trade ledger, P&L, monthly snapshots, and portfolio research views.
+- Bloomberg Mockup should be described as an interactive Bloomberg Terminal-style reference/demo built from real reference screenshots.
+- Wyandanch Library should be described as translated into Chinese.
+- Reading Library should be described as English-only books and market references for investors to learn.
+
 ### Pipeline cards
 
 - These are intentionally greyed out / visually muted.
 - They are placeholders for future work, not launched products.
 - Current concepts in the pipeline:
-  - Trade History & P&L
   - Pundit Knowledge Base
   - YouTube channel
 

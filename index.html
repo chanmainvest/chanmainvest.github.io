@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chanma Investment — Open-source investment research & tools</title>
-  <meta name="description" content="Chanma Investment — open-source investment research, portfolio analytics and tutorials. Built for myself, shared with everyone." />
+  <meta name="description" content="Chanma Investment — open-source investment research, portfolio analytics, trade history tools, tutorials and Bloomberg-style market references. Built for myself, shared with everyone." />
   <meta name="theme-color" content="#0b1220" />
   <link rel="icon" type="image/jpeg" href="assets/img/avatar.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,6 +51,7 @@
       <li><a href="#hero" data-i18n="nav.about">About</a></li>
       <li><a href="#dashboard" data-i18n="nav.dashboard">Portfolio Dashboard</a></li>
       <li><a href="#tutorial" data-i18n="nav.tutorial">Tutorial</a></li>
+      <li><a href="#more" data-i18n="nav.more">More Projects</a></li>
       <li><a href="#pipeline" data-i18n="nav.pipeline">In the Pipeline</a></li>
       <li><a href="#support" data-i18n="nav.support">Newsletter & Support</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -85,8 +86,8 @@
             <a class="btn btn-ghost" href="https://hevangel.substack.com/" target="_blank" rel="noopener" data-i18n="hero.cta.secondary">Read the newsletter</a>
           </div>
           <ul class="hero-stats">
-            <li><strong>2</strong><span data-i18n="hero.stat.live">live projects</span></li>
-            <li><strong>3</strong><span data-i18n="hero.stat.pipeline">in the pipeline</span></li>
+            <li><strong>6</strong><span data-i18n="hero.stat.live">public repos</span></li>
+            <li><strong>2</strong><span data-i18n="hero.stat.pipeline">in the pipeline</span></li>
             <li><strong>4</strong><span data-i18n="hero.stat.langs">languages supported</span></li>
           </ul>
         </div>
@@ -173,28 +174,95 @@
       </div>
     </section>
 
+    <!-- MORE LIVE PROJECTS -->
+    <section class="section more-projects" id="more">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="more.eyebrow">Now public</p>
+          <h2 data-i18n="more.title">More open-source tools</h2>
+          <p class="section-sub" data-i18n="more.sub">
+            Four more public repos are ready to inspect: two work-in-progress tools, one Chinese-translated finance library, and one English-only investor reading library.
+          </p>
+        </header>
+        <div class="showcase-grid">
+          <article class="showcase-card">
+            <div class="showcase-card-media">
+              <img src="assets/img/trade-history-transactions.png" alt="Trade History transactions screenshot" />
+            </div>
+            <div class="showcase-card-body">
+              <span class="project-kicker" data-i18n="trade.badge">Work in progress · Open-source</span>
+              <h3 data-i18n="trade.title">Trade History</h3>
+              <p data-i18n="trade.body">
+                Work in progress: multi-broker statement ingestion, a clean trading ledger, P&amp;L, monthly snapshots and research views for understanding your own history.
+              </p>
+              <div class="showcase-card-actions">
+                <a class="btn btn-primary" href="https://github.com/chanmainvest/trade_history" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card">
+            <div class="showcase-card-media bloomberg-media">
+              <img src="assets/img/bloomberg-mockup-des.jpg" alt="Bloomberg mockup DES screen screenshot" />
+            </div>
+            <div class="showcase-card-body">
+              <span class="project-kicker" data-i18n="bloom.badge">Work in progress · Reference tool</span>
+              <h3 data-i18n="bloom.title">Bloomberg Mockup</h3>
+              <p data-i18n="bloom.body">
+                Work in progress: an interactive Bloomberg Terminal-style AMD US Equity mockup built from reference screenshots, with page codes, tabs and hotspot navigation.
+              </p>
+              <div class="showcase-card-actions">
+                <a class="btn btn-primary" href="https://chanmainvest.github.io/bloomberg-mockup/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
+                <a class="btn btn-ghost" href="https://github.com/chanmainvest/bloomberg-mockup" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card">
+            <div class="showcase-card-media wyandanch-media">
+              <img src="assets/img/wyandanch-library-card.svg" alt="Wyandanch Library translated finance curriculum artwork" />
+            </div>
+            <div class="showcase-card-body">
+              <span class="project-kicker" data-i18n="wyandanch.badge">Chinese translation · Open-source</span>
+              <h3 data-i18n="wyandanch.title">Wyandanch Library</h3>
+              <p data-i18n="wyandanch.body">
+                A finance education library translated into Chinese, with a curriculum browser, reading queue and study notes from first principles to quantitative finance.
+              </p>
+              <div class="showcase-card-actions">
+                <a class="btn btn-primary" href="https://chanmainvest.github.io/wyandanch-library/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
+                <a class="btn btn-ghost" href="https://github.com/chanmainvest/wyandanch-library" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+              </div>
+            </div>
+          </article>
+          <article class="showcase-card">
+            <div class="showcase-card-media reading-media">
+              <img src="assets/img/reading-library-card.svg" alt="Reading Library investor books artwork" />
+            </div>
+            <div class="showcase-card-body">
+              <span class="project-kicker" data-i18n="library.badge">English only · Investor books</span>
+              <h3 data-i18n="library.title">Reading Library</h3>
+              <p data-i18n="library.body">
+                An English-only library of investor books and market references, converted into offline-ready single-page HTML so investors can learn and agents can ingest the material.
+              </p>
+              <div class="showcase-card-actions">
+                <a class="btn btn-primary" href="https://chanmainvest.github.io/reading_library/" target="_blank" rel="noopener" data-i18n="cta.demo">Open live demo</a>
+                <a class="btn btn-ghost" href="https://github.com/chanmainvest/reading_library" target="_blank" rel="noopener" data-i18n="cta.source">View source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- PIPELINE -->
     <section class="section pipeline" id="pipeline">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow" data-i18n="pipeline.eyebrow">Coming soon</p>
-          <h2 data-i18n="pipeline.title">In the pipeline</h2>
+          <p class="eyebrow" data-i18n="pipeline.eyebrow">Research pipeline</p>
+          <h2 data-i18n="pipeline.title">Pipeline &amp; future work</h2>
           <p class="section-sub" data-i18n="pipeline.sub">
-            Three projects I'm actively building. Same philosophy: built for myself, shared open-source.
+            Reading tools are now public; the remaining future work is the pundit knowledge base and YouTube channel.
           </p>
         </header>
-        <div class="card-grid">
-          <article class="proj-card disabled">
-            <div class="proj-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-7"/></svg>
-            </div>
-            <span class="badge" data-i18n="badge.soon">Coming soon</span>
-            <h3 data-i18n="pipe.trade.title">Trade History &amp; P&amp;L</h3>
-            <p data-i18n="pipe.trade.body">
-              Consolidate every brokerage statement into one dashboard. See realised + unrealised P&amp;L per
-              position, run what-if analysis on past trades, and learn from your own history.
-            </p>
-          </article>
+        <div class="card-grid two">
           <article class="proj-card disabled">
             <div class="proj-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
@@ -266,7 +334,7 @@
           <h2 data-i18n="contact.title">Stay in touch</h2>
           <p data-i18n="contact.body">
             Questions, ideas, bug reports? Open an issue on GitHub or drop me an email.
-            All projects are MIT-licensed; donations are entirely optional and very appreciated.
+            Check each repository for its license; donations are entirely optional and very appreciated.
           </p>
           <div class="contact-links">
             <a href="https://hevangel.com" target="_blank" rel="noopener">hevangel.com</a>
