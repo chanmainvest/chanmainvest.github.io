@@ -1,0 +1,23 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#070b13"/>
+  <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200M120 0V675M240 0V675M360 0V675M480 0V675M600 0V675M720 0V675M840 0V675M960 0V675M1080 0V675" stroke="#17223b" stroke-width="2" opacity="0.45"/>
+  <circle cx="970" cy="120" r="240" fill="#1f5dd1" opacity="0.18"/>
+  <circle cx="255" cy="535" r="280" fill="#f5b301" opacity="0.12"/>
+  <rect x="160" y="115" width="880" height="445" rx="28" fill="#0d1428" stroke="#27365e" stroke-width="3"/>
+  <rect x="160" y="115" width="880" height="58" rx="28" fill="#121d35"/>
+  <path d="M160 173H1040" stroke="#27365e" stroke-width="3"/>
+  <circle cx="200" cy="144" r="10" fill="#ff6b6b"/>
+  <circle cx="232" cy="144" r="10" fill="#f5b301"/>
+  <circle cx="264" cy="144" r="10" fill="#4f8cff"/>
+  <path d="M370 260C430 236 493 237 552 265V486C493 458 430 457 370 481V260Z" fill="#eef4ff"/>
+  <path d="M552 265C611 237 674 236 734 260V481C674 457 611 458 552 486V265Z" fill="#d9e7ff"/>
+  <path d="M552 265V486" stroke="#7da9ff" stroke-width="5"/>
+  <path d="M405 307H515M405 344H505M405 381H525M405 418H492" stroke="#4f5f82" stroke-width="10" stroke-linecap="round"/>
+  <path d="M590 307H700M590 344H680M590 381H710M590 418H672" stroke="#4f5f82" stroke-width="10" stroke-linecap="round"/>
+  <rect x="240" y="232" width="210" height="118" rx="22" fill="#17223b" stroke="#4f8cff" stroke-width="3"/>
+  <path d="M278 282H413M278 316H372" stroke="#7da9ff" stroke-width="12" stroke-linecap="round"/>
+  <rect x="745" y="330" width="210" height="118" rx="22" fill="#1d2437" stroke="#f5b301" stroke-width="3"/>
+  <path d="M783 380H918M783 414H880" stroke="#ffd44d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M445 243C485 214 523 201 559 205C610 211 650 252 700 248" stroke="#f5b301" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 22"/>
+  <path d="M720 436C680 465 642 478 606 474C555 468 515 427 465 431" stroke="#4f8cff" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 22"/>
+</svg>

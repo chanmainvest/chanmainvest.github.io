@@ -1,6 +1,6 @@
 # chanmainvest.github.io
 
-Public landing page for **Chanma Investment** — open-source investment research, portfolio analytics and tutorials.
+Public landing page for **Chanma Investment** — open-source investment research, portfolio analytics, tutorials and market tools.
 
 Live at: <https://chanmainvest.github.io/> and <https://hevangel.com/>
 
@@ -11,7 +11,11 @@ A single-page scrollytelling site (vanilla HTML / CSS / JS — no build step) th
 - **About** — quick intro
 - **Portfolio Dashboard** — <https://github.com/chanmainvest/portfolio_dashboard>
 - **Investment Tutorial** (early draft) — <https://github.com/chanmainvest/tutorial>
-- **In the pipeline** — Trade History & P&L · Pundit Knowledge Base · YouTube channel
+- **Trade History** (work in progress) — <https://github.com/chanmainvest/trade_history>
+- **Bloomberg Mockup** (work in progress) — <https://github.com/chanmainvest/bloomberg-mockup>
+- **Wyandanch Library** — Chinese-translated finance education library: <https://github.com/chanmainvest/wyandanch-library>
+- **Reading Library** — English-only investor books and market references: <https://github.com/chanmainvest/reading_library>
+- **Pipeline & future work** — Pundit Knowledge Base · YouTube channel
 - **Newsletter & support** — Substack (free) · Patreon (member tiers)
 - **Contact** — hevangel.com · email · GitHub
 
@@ -42,6 +46,10 @@ assets/
   img/avatar.jpg
   img/dashboard-screenshot.png
   img/tutorial-screenshot.png
+  img/trade-history-transactions.png
+  img/bloomberg-mockup-des.jpg
+  img/wyandanch-library-card.svg
+  img/reading-library-card.svg
 ```
 
 ## License
