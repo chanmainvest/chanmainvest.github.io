@@ -13,8 +13,10 @@ A single-page scrollytelling site (vanilla HTML / CSS / JS — no build step) th
 - **Investment Tutorial** (early draft) — <https://github.com/chanmainvest/tutorial>
 - **Trade History** (work in progress) — <https://github.com/chanmainvest/trade_history>
 - **Bloomberg Mockup** (work in progress) — <https://github.com/chanmainvest/bloomberg-mockup>
+- **Paper Library** — investment & finance academic papers with on-device RAG chatbot: <https://github.com/chanmainvest/paper_library>
 - **Wyandanch Library** — Chinese-translated finance education library: <https://github.com/chanmainvest/wyandanch-library>
 - **Reading Library** — English-only investor books and market references: <https://github.com/chanmainvest/reading_library>
+- **In Gold We Trust Library** (work in progress) — annual gold reports converted to markdown: <https://github.com/chanmainvest/ingoldwetrust_library>
 - **Pipeline & future work** — Pundit Knowledge Base · YouTube channel
 - **Newsletter & support** — Substack (free) · Patreon (member tiers)
 - **Contact** — hevangel.com · email · GitHub
@@ -48,8 +50,10 @@ assets/
   img/tutorial-screenshot.png
   img/trade-history-transactions.png
   img/bloomberg-mockup-des.jpg
+  img/paper-library-card.svg
   img/wyandanch-library-card.svg
   img/reading-library-card.svg
+  img/ingoldwetrust-library-card.svg
 ```
 
 ## License

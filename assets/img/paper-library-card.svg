@@ -1,0 +1,61 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0b1120"/>
+  <circle cx="980" cy="110" r="240" fill="#4f8cff" opacity="0.14"/>
+  <circle cx="210" cy="555" r="270" fill="#f5b301" opacity="0.12"/>
+  <rect x="120" y="100" width="960" height="475" rx="28" fill="#0f172a" stroke="#27365e" stroke-width="3"/>
+  <rect x="120" y="100" width="960" height="58" rx="28" fill="#141d33"/>
+  <path d="M120 158H1080" stroke="#27365e" stroke-width="3"/>
+  <circle cx="160" cy="129" r="10" fill="#ff6b6b"/>
+  <circle cx="192" cy="129" r="10" fill="#f5b301"/>
+  <circle cx="224" cy="129" r="10" fill="#4f8cff"/>
+  <text x="280" y="136" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#7da9ff">papers / catalog.json</text>
+
+  <!-- journal card 1 -->
+  <rect x="160" y="195" width="430" height="155" rx="14" fill="#131c30" stroke="#27365e" stroke-width="2"/>
+  <rect x="180" y="214" width="180" height="14" rx="4" fill="#f5b301"/>
+  <rect x="180" y="240" width="280" height="10" rx="3" fill="#7da9ff"/>
+  <rect x="180" y="258" width="220" height="10" rx="3" fill="#7da9ff" opacity="0.7"/>
+  <rect x="180" y="288" width="380" height="8" rx="3" fill="#475569"/>
+  <rect x="180" y="304" width="360" height="8" rx="3" fill="#475569"/>
+  <rect x="180" y="320" width="280" height="8" rx="3" fill="#475569"/>
+  <rect x="490" y="304" width="84" height="22" rx="11" fill="#1f2c4a" stroke="#4f8cff" stroke-width="1.5"/>
+  <text x="532" y="320" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#7da9ff" text-anchor="middle">arXiv</text>
+
+  <!-- journal card 2 -->
+  <rect x="610" y="195" width="430" height="155" rx="14" fill="#131c30" stroke="#27365e" stroke-width="2"/>
+  <rect x="630" y="214" width="200" height="14" rx="4" fill="#4f8cff"/>
+  <rect x="630" y="240" width="260" height="10" rx="3" fill="#7da9ff"/>
+  <rect x="630" y="258" width="190" height="10" rx="3" fill="#7da9ff" opacity="0.7"/>
+  <rect x="630" y="288" width="390" height="8" rx="3" fill="#475569"/>
+  <rect x="630" y="304" width="350" height="8" rx="3" fill="#475569"/>
+  <rect x="630" y="320" width="300" height="8" rx="3" fill="#475569"/>
+  <rect x="930" y="304" width="84" height="22" rx="11" fill="#2a2310" stroke="#f5b301" stroke-width="1.5"/>
+  <text x="972" y="320" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ffd44d" text-anchor="middle">SSRN</text>
+
+  <!-- journal card 3 -->
+  <rect x="160" y="370" width="430" height="155" rx="14" fill="#131c30" stroke="#27365e" stroke-width="2"/>
+  <rect x="180" y="389" width="160" height="14" rx="4" fill="#7da9ff"/>
+  <rect x="180" y="415" width="300" height="10" rx="3" fill="#7da9ff"/>
+  <rect x="180" y="433" width="240" height="10" rx="3" fill="#7da9ff" opacity="0.7"/>
+  <rect x="180" y="463" width="370" height="8" rx="3" fill="#475569"/>
+  <rect x="180" y="479" width="340" height="8" rx="3" fill="#475569"/>
+  <rect x="180" y="495" width="260" height="8" rx="3" fill="#475569"/>
+  <rect x="490" y="479" width="84" height="22" rx="11" fill="#0f2a1c" stroke="#34d399" stroke-width="1.5"/>
+  <text x="532" y="495" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#34d399" text-anchor="middle">DOI</text>
+
+  <!-- chatbot panel -->
+  <rect x="610" y="370" width="430" height="155" rx="14" fill="#0d1428" stroke="#4f8cff" stroke-width="2.5"/>
+  <circle cx="645" cy="402" r="14" fill="#4f8cff"/>
+  <path d="M640 402l4 4 7-8" stroke="#0b1120" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="670" y="408" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">On-device Gemma 4 · RAG</text>
+  <rect x="630" y="424" width="270" height="26" rx="13" fill="#17243f"/>
+  <text x="645" y="441" font-family="Inter, sans-serif" font-size="11" fill="#94a3b8">What does the VIX white paper…</text>
+  <rect x="910" y="424" width="60" height="26" rx="13" fill="#4f8cff"/>
+  <text x="940" y="441" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#0b1120" text-anchor="middle">Ask</text>
+  <rect x="630" y="464" width="390" height="8" rx="3" fill="#475569"/>
+  <rect x="630" y="480" width="370" height="8" rx="3" fill="#475569"/>
+  <rect x="630" y="496" width="220" height="8" rx="3" fill="#475569"/>
+
+  <path d="M180 560L260 560M300 560L1020 560" stroke="#f5b301" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  <text x="600" y="640" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#e2e8f0" text-anchor="middle">Paper Library · 56 papers indexed</text>
+</svg>
