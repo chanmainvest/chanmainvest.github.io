@@ -5,6 +5,53 @@
   const $  = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
 
+  /* -------- HOST-AWARE DEMO LINKS --------
+     github.io → each project's GitHub Pages URL
+     hevangel.com → sibling git submodules checked out next to this landing page
+     Repos that publish from docs/ (tutorial, wyandanch-library) keep that
+     local path so nginx can serve the built site from the submodule tree.
+  */
+  const DEMO_LINKS = {
+    portfolio_dashboard: {
+      github: 'https://chanmainvest.github.io/portfolio_dashboard/',
+      local: '/portfolio_dashboard/'
+    },
+    tutorial: {
+      github: 'https://chanmainvest.github.io/tutorial/',
+      local: '/tutorial/docs/'
+    },
+    'bloomberg-mockup': {
+      github: 'https://chanmainvest.github.io/bloomberg-mockup/',
+      local: '/bloomberg-mockup/'
+    },
+    paper_library: {
+      github: 'https://chanmainvest.github.io/paper_library/',
+      local: '/paper_library/'
+    },
+    'wyandanch-library': {
+      github: 'https://chanmainvest.github.io/wyandanch-library/',
+      local: '/wyandanch-library/docs/'
+    },
+    reading_library: {
+      github: 'https://chanmainvest.github.io/reading_library/',
+      local: '/reading_library/'
+    }
+  };
+
+  function isCustomDomainHost() {
+    const host = (location.hostname || '').toLowerCase();
+    return host === 'hevangel.com' || host.endsWith('.hevangel.com');
+  }
+
+  function applyDemoLinks() {
+    const useLocal = isCustomDomainHost();
+    $$('a[data-demo]').forEach((anchor) => {
+      const spec = DEMO_LINKS[anchor.getAttribute('data-demo')];
+      if (!spec) return;
+      anchor.setAttribute('href', useLocal ? spec.local : spec.github);
+    });
+  }
+
   /* -------- THEME -------- */
   const root = document.documentElement;
   const themeBtn = $('#themeToggle');
@@ -129,6 +176,7 @@
     return 'en';
   })();
   applyLang(initialLang);
+  applyDemoLinks();
 
   /* -------- SIDE NAV -------- */
   const hamburger = $('#hamburger');

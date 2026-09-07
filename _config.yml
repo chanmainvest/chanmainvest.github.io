@@ -1,0 +1,11 @@
+# GitHub Pages uses Jekyll by default. Keep submodule checkouts on
+# hevangel.com only; do not publish those trees from this repo.
+exclude:
+  - portfolio_dashboard
+  - tutorial
+  - bloomberg-mockup
+  - paper_library
+  - wyandanch-library
+  - reading_library
+  - AGENTS.md
+  - .gitmodules

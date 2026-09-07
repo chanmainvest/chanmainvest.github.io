@@ -20,6 +20,7 @@ The purpose of this file is to give the next AI agent enough context to make cha
 ## Product intent
 
 - This site is the landing page for both `chanmainvest.github.io` and `hevangel.com`.
+- Live-demo buttons must stay host-aware: GitHub Pages visitors go to `https://chanmainvest.github.io/<repo>/`; `hevangel.com` visitors go to the matching git submodule path on the same host.
 - It is a single-page scrollytelling site that introduces the person behind Chanma Investment, showcases live projects, and leaves room for future projects.
 - The tone should stay professional, investment-focused, and credible.
 - The visual language should feel intentional and editorial rather than generic startup landing-page boilerplate.
@@ -244,10 +245,20 @@ Keep this area compact and professional rather than turning it into a large soci
 
 ## Deployment context
 
-- GitHub Pages serves the repo directly.
-- `hevangel.com` also serves this site via nginx.
-- The plain static site is deployed to `/var/www/html` on the server.
-- The site is plain static files, so deployment is a file copy rather than a build artifact upload.
+- GitHub Pages serves the landing page from this repo. Each live demo is still a **project Pages** site on its own repository (`https://chanmainvest.github.io/<repo>/`).
+- GitHub Pages should deploy from the `Deploy GitHub Pages` workflow (checkout **without** submodules) so the org site stays a thin landing page. Set the repo Pages source to **GitHub Actions**.
+- `_config.yml` also excludes the demo submodule directories for the older "deploy from branch" Pages path.
+- `hevangel.com` also serves this site via nginx from `/var/www/html`.
+- On `hevangel.com`, the other static demos are git submodules of this repo, checked out next to `index.html`. `assets/js/main.js` rewrites `a[data-demo]` hrefs when `hostname` is `hevangel.com` (or a subdomain).
+- `bloomberg-mockup` on GitHub is currently disabled, so that submodule URL points at the GitLab backup (`https://gitlab.com/chanmainvest/bloomberg-mockup.git`). The other demos still clone from GitHub.
+- Submodule local paths:
+  - `/portfolio_dashboard/`
+  - `/tutorial/docs/` (GitHub Pages source is `docs/`)
+  - `/bloomberg-mockup/`
+  - `/paper_library/`
+  - `/wyandanch-library/docs/` (GitHub Pages source is `docs/`)
+  - `/reading_library/`
+- The landing page itself is still a file copy of `index.html` + `assets/`. Submodules are updated separately with `git submodule update --init`.
 
 ## SSL context
 
@@ -265,6 +276,7 @@ Keep this area compact and professional rather than turning it into a large soci
 - When changing screenshot behavior, verify that the sticky visual still works on mobile and desktop.
 - If adding new sections, make sure the side-nav anchor list stays in sync.
 - If changing controls in the header, verify they still fit on mobile widths.
+- If adding a new live demo, add a git submodule, a `data-demo` key on the button, a `DEMO_LINKS` entry in `assets/js/main.js`, and a matching `_config.yml` exclude.
 
 ## Validation expectations
 
@@ -294,6 +306,14 @@ Deploy to the custom-domain server:
 scp -r b:\chanmainvest\chanmainvest.github.io\index.html b:\chanmainvest\chanmainvest.github.io\assets hevangel.com:/tmp/chanma_site/
 ssh hevangel.com 'sudo -n rm -f /var/www/html/index.html; sudo -n rm -rf /var/www/html/assets; sudo -n cp -a /tmp/chanma_site/index.html /tmp/chanma_site/assets /var/www/html/; sudo -n chown -R www-data:www-data /var/www/html/index.html /var/www/html/assets; sudo -n chmod -R a+rX /var/www/html/index.html /var/www/html/assets; rm -rf /tmp/chanma_site'
 ```
+
+First-time (or after adding a demo submodule), check the landing repo out on the server with submodules. If `/var/www/html` is already a clone of this repo:
+
+```pwsh
+ssh hevangel.com 'cd /var/www/html && sudo -n git submodule update --init --depth 1 && sudo -n chown -R www-data:www-data portfolio_dashboard tutorial bloomberg-mockup paper_library wyandanch-library reading_library && sudo -n chmod -R a+rX portfolio_dashboard tutorial bloomberg-mockup paper_library wyandanch-library reading_library'
+```
+
+If the document root is still a plain file copy (no `.git`), clone this repo elsewhere, init submodules, then copy or bind-mount the demo directories next to `index.html`.
 
 Sanity-check the deployed site:
 

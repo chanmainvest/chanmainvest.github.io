@@ -4,6 +4,8 @@ Public landing page for **Chanma Investment** — open-source investment researc
 
 Live at: <https://chanmainvest.github.io/> and <https://hevangel.com/>
 
+Demo buttons are host-aware: on GitHub Pages they open the matching project at `chanmainvest.github.io/<repo>/`; on `hevangel.com` they open the git submodules checked out beside this landing page.
+
 ## What's here
 
 A single-page scrollytelling site (vanilla HTML / CSS / JS — no build step) that showcases:
@@ -41,19 +43,25 @@ python -m http.server 8080
 
 ```
 index.html
+_config.yml          # keeps GitHub Pages from publishing submodule trees
+.gitmodules
 assets/
   css/styles.css
-  js/main.js
+  js/main.js         # rewrites demo hrefs for github.io vs hevangel.com
   js/i18n.js
-  img/avatar.jpg
-  img/dashboard-screenshot.png
-  img/tutorial-screenshot.png
-  img/trade-history-transactions.png
-  img/bloomberg-mockup-des.jpg
-  img/paper-library-card.svg
-  img/wyandanch-library-card.svg
-  img/reading-library-card.svg
-  img/ingoldwetrust-library-card.svg
+  img/…
+portfolio_dashboard/ # submodule (hevangel.com only)
+tutorial/            # submodule; site is tutorial/docs/
+bloomberg-mockup/    # submodule
+paper_library/       # submodule
+wyandanch-library/   # submodule; site is wyandanch-library/docs/
+reading_library/     # submodule
+```
+
+After clone on `hevangel.com`:
+
+```pwsh
+git submodule update --init --depth 1
 ```
 
 ## License

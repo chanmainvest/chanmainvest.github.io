@@ -1,0 +1,24 @@
+[submodule "portfolio_dashboard"]
+	path = portfolio_dashboard
+	url = https://github.com/chanmainvest/portfolio_dashboard.git
+	branch = main
+[submodule "tutorial"]
+	path = tutorial
+	url = https://github.com/chanmainvest/tutorial.git
+	branch = main
+[submodule "bloomberg-mockup"]
+	path = bloomberg-mockup
+	url = https://gitlab.com/chanmainvest/bloomberg-mockup.git
+	branch = main
+[submodule "paper_library"]
+	path = paper_library
+	url = https://github.com/chanmainvest/paper_library.git
+	branch = main
+[submodule "wyandanch-library"]
+	path = wyandanch-library
+	url = https://github.com/chanmainvest/wyandanch-library.git
+	branch = master
+[submodule "reading_library"]
+	path = reading_library
+	url = https://github.com/chanmainvest/reading_library.git
+	branch = main
